@@ -1,0 +1,31 @@
+<%= form_for(@new_retailer) do |f| %>
+  <% if @new_retailer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@new_retailer.errors.count, "error") %> prohibited this article from being saved:</h2>
+
+      <ul>
+      <% @new_retailer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ 
+    <%= f.label :fullname %>:
+    <%= f.text_field :fullname %><br>
+ 
+    <%= f.label :email %>:
+    <%= f.text_field :email %><br>
+  
+    <%= f.label :mobile %>:
+    <%= f.text_field :mobile %><br>
+  
+    <%= f.label :password %>:
+    <%= f.text_field :password %><br>
+    
+    <%= f.label "Password-retype" %>:
+    <%= f.text_field :password %><br>
+
+    <%= f.submit %><br>
+<% end %>
