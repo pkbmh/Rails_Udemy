@@ -1,0 +1,26 @@
+create simple hello world app -
+    rails new appname
+    cd appname
+    rails server // start rail server
+    go to localhost 3000
+    rails generate controller pages // generate controller pages (name must be plural)
+        above command will create ruby file at "app/controllers/pages_controller.rb"
+        open file and add below code -
+            "class PagesController < ApplicationController
+              def home
+                puts "Honey, I'm home!"
+              end
+            end"
+    create a file named "home.html.erb" at "app/views/pages/" and add this line "<h1>Hello world!</h1>"
+    add " root to: 'pages#home' " in "config/routes.rb" file 
+    go to browser and reload you will see hello world
+    
+    
+ ----------------------------------------------------------------------------------------------------------------
+ create app and connect with database
+  install gem install mysql2 
+  rails new appname -d mysql // -d mysql define app will use mysql database 
+  cd appname
+  vi config/database.yml and add password
+  rake db:create // create database it should create two databse "appname_development" and "appname_test".
+  
