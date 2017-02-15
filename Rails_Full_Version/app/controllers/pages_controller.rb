@@ -18,7 +18,7 @@ class PagesController < ApplicationController
   end
 
   def login_2
-    render :layout => "empty"
+    # render :layout => "empty"
   end
 
   def forgot_password
